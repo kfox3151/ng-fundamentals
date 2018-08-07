@@ -19,8 +19,9 @@ import {
   EventRouteActivator,
   EventListResolver,
   CreateSessionComponent,
-  SessionListComponent
- } from './events';
+  SessionListComponent,
+  DurationPipe
+    } from './events';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {
     Error404Component,
     CreateSessionComponent,
     SessionListComponent,
-    CollapsibleWellComponent
+    CollapsibleWellComponent,
+    DurationPipe
   ],
   imports: [
     BrowserModule,
