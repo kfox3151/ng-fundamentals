@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
     mouseoverLogin: boolean;
-    username;
+    userName;
     password;
     constructor(private authService: AuthService, private router: Router) {
 

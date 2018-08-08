@@ -6,7 +6,7 @@
     autocomplete="off">
     <div class="form-group" >
       <label for="userName">User Name:</label>
-      <em *ngIf="loginForm.controls.userName?.invalid && loginForm.controls.username?.touched || mouseoverLogin">Required</em>
+      <em *ngIf="loginForm.controls.userName?.invalid && loginForm.controls.userName?.touched || mouseoverLogin">Required</em>
       <input id="userName"
       (ngModel)="userName" 
       name="userName" 

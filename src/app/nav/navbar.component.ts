@@ -11,6 +11,6 @@ import { AuthService } from '../user/auth.service';
         li > a.active { color: #F97924; }`]
 })
 export class NavBarComponent {
-    constructor(private authService: AuthService) {
+    constructor(public authService: AuthService) {
     }
 }
