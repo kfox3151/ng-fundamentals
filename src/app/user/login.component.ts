@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
         em { float: right; color: #E05C65; padding-left: 10px; }`]
 })
 export class LoginComponent {
-    mouseoverLogin
+    mouseoverLogin: boolean;
     constructor(private authService: AuthService, private router: Router) {
 
     }
