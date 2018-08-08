@@ -25,7 +25,7 @@ export class ProfileComponent implements OnInit {
     //@Inject(TOASTR_TOKEN) private toastr: Toastr) {}
 
   ngOnInit() {
-    this.firstName = new FormControl(this.authService.currentUser.firstName, [Validators.required, Validators.pattern('[a-zA-z.*')]);
+    this.firstName = new FormControl(this.authService.currentUser.firstName, [Validators.required, Validators.pattern('[a-zA-z.*]')]);
     this.lastName = new FormControl(this.authService.currentUser.lastName, Validators.required);
 
     this.profileForm = new FormGroup({
