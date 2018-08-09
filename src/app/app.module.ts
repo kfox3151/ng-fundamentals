@@ -19,6 +19,8 @@ import {
   EventListResolver,
   CreateSessionComponent,
   SessionListComponent,
+  UpvoteComponent,
+  VoterService,
   DurationPipe
     } from './events';
 
@@ -39,6 +41,7 @@ import {
     CollapsibleWellComponent,
     SimpleModalComponent,
     ModalTriggerDirective,
+    UpvoteComponent,
     DurationPipe
   ],
   imports: [
@@ -53,6 +56,7 @@ import {
     { provide: JQ_TOKEN, useValue: jQuery },
     EventListResolver,
     AuthService,
+    VoterService,
     EventRouteActivator,
     {
       provide: 'CanDeactivateCreateEvent',
