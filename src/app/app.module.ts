@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './nav/routes';
 import { Error404Component } from './errors/404.component';
 import { AuthService } from './user/auth.service';
+import { HttpClientModule } from '@angular/common/http';
 import {
   EventListComponent,
   EventThumbnailComponent,
@@ -50,7 +51,8 @@ import {
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [
     EventService,
