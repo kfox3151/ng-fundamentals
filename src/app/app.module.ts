@@ -16,14 +16,14 @@ import {
   EventService,
   EventDetailsComponent,
   CreateEventComponent,
-  EventRouteActivator,
   EventListResolver,
   CreateSessionComponent,
   SessionListComponent,
   UpvoteComponent,
   VoterService,
   LocationValidator,
-  DurationPipe
+  DurationPipe,
+  EventResolver
     } from './events';
 
   let toastr: Toastr = window['toastr'];
@@ -60,8 +60,8 @@ import {
     { provide: JQ_TOKEN, useValue: jQuery },
     EventListResolver,
     AuthService,
+    EventResolver,
     VoterService,
-    EventRouteActivator,
     {
       provide: 'CanDeactivateCreateEvent',
       useValue: checkDirtyState
