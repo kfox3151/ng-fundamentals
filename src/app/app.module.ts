@@ -21,6 +21,7 @@ import {
   SessionListComponent,
   UpvoteComponent,
   VoterService,
+  LocationValidator,
   DurationPipe
     } from './events';
 
@@ -42,6 +43,7 @@ import {
     SimpleModalComponent,
     ModalTriggerDirective,
     UpvoteComponent,
+    LocationValidator,
     DurationPipe
   ],
   imports: [
