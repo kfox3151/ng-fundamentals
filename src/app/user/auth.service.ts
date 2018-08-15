@@ -17,7 +17,7 @@ export class AuthService {
         let options = { headers: new HttpHeaders({ 'Content-Type': 'application/json'})}
         return this.http.post('/api/login', loginInfo, options)
             .pipe(tap(data => {
-                this.currentUser = <IUser>data['user']
+                this.currentUser = <IUser>data['user'];
             }))
             .pipe(catchError(err =>  {
                 return of(false);
@@ -31,5 +31,15 @@ export class AuthService {
     updateCurrentUser(firstName: string, lastName: string) {
         this.currentUser.firstName = firstName;
         this.currentUser.lastName = lastName;
+    }
+
+    checkAuthenticationStatus() {
+        this.http.get('/api/currentIdentity')
+            .pipe(tap(data => {
+                if(data  instanceof  Object) {
+                    this.currentUser = <IUser>data;
+                }
+            }))
+            .subscribe();
     }
 }
